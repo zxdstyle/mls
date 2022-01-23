@@ -1,10 +1,15 @@
 import { RouteRecordRaw } from 'vue-router'
-
 const routes: RouteRecordRaw[] = [
 	{
 		path: '/',
-		name: 'dashboard',
-		component: () => import('@/views/dashboard/index.vue'),
+		component: () => import('@/layouts/default/index.vue'),
+		children: [
+			{
+				path: '/:connect/:index',
+				name: 'data',
+				component: () => import('@/views/data/index.vue'),
+			},
+		],
 	},
 ]
 

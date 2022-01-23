@@ -1,3 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./components/xterm";
+@import "./components/menu";
+@import "./components/button";
+@import "./components/tailwind";
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	display: none;
+}
+
+::-webkit-scrollbar-thumb {
+	display: none;
+	background-color: #d9d9d9;
+	background-clip: padding-box;
+	border-radius: 3px;
+	border-right: 2px solid transparent;
+	border-left: 2px solid transparent;
+}

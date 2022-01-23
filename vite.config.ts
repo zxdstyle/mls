@@ -12,6 +12,9 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			less: {
+				modifyVars: {
+					hack: `true; @import (reference) "${resolve('src/assets/less/variable.less')}";`,
+				},
 				javascriptEnabled: true,
 			},
 		},
